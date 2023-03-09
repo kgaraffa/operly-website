@@ -21,6 +21,11 @@ body {
     -moz-box-sizing: border-box;
 }
 
+a {
+    cursor: pointer;
+    color: #2ecc71 !important;
+}
+
 .sticky-top {
     padding: 8px !important;
 }
@@ -36,7 +41,6 @@ body {
 }
 ul.navbar-nav li a {
     transition: all 0.5s ease-in-out;
-    color: #000000 !important;
     font-size: 16px;
     padding: 0 0 !important;
     position: relative;
@@ -905,6 +909,38 @@ ul.navbar-nav li a.text_:hover::after {
         width: calc(100% - 50px);
     }
 
+    .founders-profile-video>img {
+        width: 180px !important;
+        height: 180px !important;
+        border-radius: 50%;
+    }
+
+    .emp-mobile {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .emp {
+        width: 100%;
+        height: 100%;
+    }
+
+    #OperlyBanner img,
+    #OperlyYield img,
+    #OperlyStable img,
+    #OperlyScalable img,
+    #OperlySustain img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bottom-text-footer {
+        margin-top: 18px;
+    }
+
     .get-in-touch textarea,
     .get-in-touch input,
     .get-in-touch .button-inner-wrapper button,
@@ -929,10 +965,11 @@ ul.navbar-nav li a.text_:hover::after {
     }
 }
 
-#about img, #two img, #three img, #four img {
+#about img, #two img, #three img, #four img, #five img {
     border-radius: 40px;
     display: block;
     margin: 0 auto;
+    max-width: 100%;
 }
 
 .first-section .row:nth-child(odd) {
@@ -956,7 +993,7 @@ ul.navbar-nav li a.text_:hover::after {
 .our-mission h2 {
     color: white;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 3em;
     padding-bottom: 60px;
 }
 
@@ -975,7 +1012,7 @@ ul.navbar-nav li a.text_:hover::after {
 .what-are-you-waiting-for h2 {
     color: white;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 3em;
 }
 
 .footer-section {
@@ -986,18 +1023,38 @@ ul.navbar-nav li a.text_:hover::after {
 }
 
 button.primary, input.button, a.button {
-    border: 0;
+    border: 1px solid #2ecc71;
     background-color: #2ecc71;
-    color: #fff;
+    color: #fff !important;
     padding: 8px 36px;
     border-radius: 40px;
+    cursor: pointer;
+    transition: .2s;
 }
 
-button.secondary {
-    border: 0;
+button.primary:hover, input.button:hover, a.button:hover {
+    background-color: #fff;
+    color: #2ecc71 !important;
+    text-decoration: none;
+    transition: .2s;
+}
+
+button.secondary, a.secondary {
+    border: 1px solid #363636;
     background-color: #363636;
-    color: #fff;
+    color: #fff !important;
     padding: 8px 36px;
+    transition: .2s;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+button.secondary:hover, a.secondary:hover {
+    background-color: #fff;
+    color: #363636 !important;
+    padding: 8px 36px;
+    text-decoration: none;
+    transition: .2s;
     border-radius: 40px;
 }
 
@@ -1008,4 +1065,52 @@ button.secondary {
     border-color: #eee;
     border-style: solid;
     margin-bottom: 10px;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: #999;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 100;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: .2s;
+    background: #fff;
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 262px;
+    border-radius: 20px;
+    margin-left: -250px; /*Half the value of width to center div*/
+    margin-top: -250px; /*Half the value of height to center div*/
+    z-index: 200;
+}
+
+#popupclose {
+    float: right;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.popupcontent {
+    padding: 60px 40px;
+}
+
+#mc_embed_signup div.mce_inline_error {
+    margin: 0 0 1em 0 !important;
+    padding: 5px !important;
+    font-size: .75em !important;
+    background: transparent !important;
+    font-weight: normal !important;
+    z-index: 1 !important;
+    color: #ff0000 !important;
 }
