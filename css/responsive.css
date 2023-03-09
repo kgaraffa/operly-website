@@ -198,7 +198,7 @@
         display: none;
     }
     .mobile-device-show {
-        display: block;
+        display: inline-flex;
     }
     ul.navbar-nav li {
         border-bottom: 2px solid #ddd;
